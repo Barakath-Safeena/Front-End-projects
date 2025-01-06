@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="pass">
+    <button onclick="forget()">forget password</button>
+    <buttun onclick="submit()">submit</buttun>
+
+</body>
+<script>
+  
+    function submit(){
+        let password=document.getElementById("pass");
+        let passval=1234;
+        if(password==passval){
+            alert("password successfull");
+
+        }
+        else if(password!=passval){
+            alert("password wrong");
+        }
+        else{
+        var data=localStorage.getItem('savedata')
+       password.innerText=data|| "no data found";
+    }}
+    function forget(){
+        window.location.href="changepassword.html";
+       
+
+        
+    }
+</script>
+</html>

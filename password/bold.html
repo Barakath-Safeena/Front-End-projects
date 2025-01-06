@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div  id="text">helloo</div>
+    <button onclick="texts()">click</button>
+    <script>
+        function texts(){
+            let text=document.getElementById("text");
+            if (!text){
+                console.error("Element not found.");
+    return;
+            }
+            document.execCommand("italic",false,null);
+        }
+        const italicButton = document.getElementById('italicButtonId');
+italicButton.addEventListener('click', function() {
+  texts();
+});
+    </script>
+</body>
+
+</html>
